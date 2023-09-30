@@ -1,0 +1,54 @@
+body {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 840px;
+}
+
+.masonry-with-columns {
+  columns: 4 150px;
+  column-gap: 5px;
+  margin: 0 auto;
+}
+.masonry-with-columns div {
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+  /*font-family: system-ui;
+  font-weight: 900;
+  font-size: 2rem;*/
+}
+
+.masonry-with-columns img {
+  height:100%; 
+  width:100%;
+  object-fit: cover;
+}
+
+.small {
+  height: 178px;
+}
+
+.medium {
+  height: 361px;
+}
+
+.footer {
+  position: relative;
+  top: 4rem;
+  left: 1rem;
+  font: 300 1em system-ui;
+  color: #333;
+}
+
+footer a {
+  color: #333;
+  background-color: white;
+  margin-right: 1rem;
+  padding: 5px 1rem;
+  border-radius: 1rem;
+}
