@@ -52,3 +52,10 @@ footer a {
   padding: 5px 1rem;
   border-radius: 1rem;
 }
+
+.reload:hover,
+.reload {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
