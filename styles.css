@@ -38,17 +38,17 @@ body {
 }
 
 .footer {
-  position: relative;
-  top: 4rem;
-  left: 1rem;
+  margin-top: 3rem;
+  /*left: 1rem;*/
   font: 300 1em system-ui;
   color: #333;
 }
 
 footer a {
+  display: inline-block;
   color: #333;
   background-color: white;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
   padding: 5px 1rem;
   border-radius: 1rem;
 }
