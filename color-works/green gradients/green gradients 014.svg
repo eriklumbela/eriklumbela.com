@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg1" version="1.1" viewBox="0 0 3840 2160" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs1">
+    <linearGradient id="linearGradient2" x1="1920" x2="3840" y1="1080" y2="1080" gradientTransform="matrix(.99985 0 0 .99988 .5923 -.26302)" gradientUnits="userSpaceOnUse">
+      <stop id="stop1" stop-color="#166a16" stop-opacity=".48677" offset="0"/>
+      <stop id="stop2" stop-color="#008000" offset=".8651"/>
+    </linearGradient>
+    <linearGradient id="linearGradient1" x1="1920" x2="3840" y1="1080" y2="1080" gradientTransform="matrix(1.0003 0 0 .99986 -3841.6 -2159.7)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient2"/>
+    <linearGradient id="linearGradient3" x1="1920" x2="3840" y1="1080" y2="1080" gradientTransform="matrix(.99985 0 0 .9999 .58474 -.26302)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient2"/>
+  </defs>
+  <rect id="rect1-2" transform="rotate(.0078604)" x="1920.3" y="-.26344" width="1919.7" height="2159.7" fill="url(#linearGradient3)" stroke-width=".99987"/>
+  <rect id="rect1-2-9" transform="rotate(180.01)" x="-1921" y="-2159.7" width="1920.6" height="2159.7" fill="url(#linearGradient1)" stroke-width="1.0001"/>
+</svg>
