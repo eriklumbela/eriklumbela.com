@@ -1,15 +1,16 @@
 body {
   padding: 1rem;
   margin: 0 auto;
+  font: 300 1em system-ui;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 1060px;
 }
 
 .masonry-with-columns {
-  columns: 4 150px;
+  columns: 3 200px;
   column-gap: 5px;
   margin: 0 auto;
 }
@@ -17,10 +18,7 @@ body {
   width: 100%;
   margin: auto;
   display: inline-block;
-  text-align: center;
-  /*font-family: system-ui;
-  font-weight: 900;
-  font-size: 2rem;*/
+  text-align: left;
 }
 
 .masonry-with-columns img {
@@ -37,10 +35,17 @@ body {
   height: 361px;
 }
 
+header a {
+  display: inline-block;
+  color: #333;
+  background-color: white;
+  margin: 0 1rem 1rem 0;
+  padding: 5px 1rem;
+  border-radius: 1rem;
+}
+
 .footer {
   margin-top: 3rem;
-  /*left: 1rem;*/
-  font: 300 1em system-ui;
   color: #333;
 }
 
