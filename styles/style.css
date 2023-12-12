@@ -46,7 +46,9 @@ body {
 
 header {
   position: fixed;
-  top: 5px;
+  top: 0px;
+  padding-top: 5px;
+  /*width: 100%;*/
   background-color: white;
 }
 
@@ -54,10 +56,10 @@ header a {
   display: inline-block;
   color: #333;
   background-color: white;
-  margin: 0 1rem 1rem 0;
-  padding: 5px 1rem;
-  border-radius: 1rem;
+  margin: 5px;
+  padding: 5px 10px;
   text-decoration: underline solid black;
+  cursor: pointer;
 }
 
 header a.visible {
@@ -65,7 +67,7 @@ header a.visible {
 }
 
 header a.hidden {
-  text-decoration: line-through solid black;
+  text-decoration: line-through 3px solid red;
 }
 
 .footer {
@@ -77,16 +79,20 @@ footer a {
   display: inline-block;
   color: #333;
   background-color: white;
-  margin: 0 1rem 1rem 0;
-  padding: 5px 1rem;
+  margin: 5px;
+  padding: 5px;
   border-radius: 1rem;
 }
 
-.reload:hover,
-.reload {
+.alternate:hover,
+.alternate {
   background-color: #333;
   color: white;
   cursor: pointer;
+}
+
+.reload {
+  text-decoration: none;
 }
 
 .left {
