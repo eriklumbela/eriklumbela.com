@@ -22,10 +22,6 @@ body {
   text-align: left;
 }
 
-.masonry-with-columns div.visible {
-  display: inline-block;
-}
-
 .masonry-with-columns div.hidden {
   display: none;
 }
@@ -60,10 +56,6 @@ header a {
   padding: 5px 10px;
   text-decoration: underline solid black;
   cursor: pointer;
-}
-
-header a.visible {
-  text-decoration: underline solid black;
 }
 
 header a.hidden {
