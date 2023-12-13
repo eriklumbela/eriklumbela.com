@@ -54,7 +54,7 @@ header a {
   background-color: white;
   margin: 5px;
   padding: 5px 10px;
-  text-decoration-line: underline;
+  text-decoration-line: none;
   cursor: pointer;
 }
 
