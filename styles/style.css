@@ -54,12 +54,14 @@ header a {
   background-color: white;
   margin: 5px;
   padding: 5px 10px;
-  text-decoration: underline black solid 1px;
+  text-decoration-line: underline;
   cursor: pointer;
 }
 
 header a.hidden {
-  text-decoration: line-through red solid 3px;
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 3px;
 }
 
 .footer {
