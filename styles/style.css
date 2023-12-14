@@ -6,7 +6,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1060px;
+  max-width: 2000px;
 }
 
 .masonry-with-columns {
@@ -25,6 +25,10 @@ body {
 
 .masonry-with-columns div.hidden {
   display: none;
+}
+
+.masonry-with-columns div.texts {
+  max-width: 500px;
 }
 
 .masonry-with-columns img {
