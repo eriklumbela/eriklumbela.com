@@ -28,9 +28,11 @@
       <!--<a id="still-videos-toggle" onclick="toggleVisibility(event)">still videos</a>-->
       <a id="works-of-color-toggle" onclick="toggleVisibility(event)">works of color</a>
       <a id="named-color-toggle" onclick="toggleVisibility(event)">named color</a>
+      <a id="cirkels-toggle" onclick="toggleVisibility(event)">cirkels</a>
+      <a id="afstand-toggle" onclick="toggleVisibility(event)">afstand</a>
       <a id="time-pieces-toggle" onclick="toggleVisibility(event)">time pieces</a>
-      <a id="other-toggle" onclick="toggleVisibility(event)">other</a>
-      <a id="things-that-are-toggle" onclick="toggleVisibility(event)">things that are</a>
+      <!--<a id="other-toggle" onclick="toggleVisibility(event)">other</a>-->
+      <a id="dingen-die-zijn-toggle" onclick="toggleVisibility(event)">dingen die zijn</a>
     </header>
     <div class="masonry-with-columns">
       <div id="red-squares-004" class="work visuals all works-of-color red-squares-004">     
@@ -45,6 +47,22 @@
       <div id="time-of-my-life" class="work texts all time-pieces time-of-my-life">
         <h2>time of my life</h2>
         <p id="seconds-left">...</p>
+      </div>
+      <div id="kleine-rode-cirkel-54-cm" class="work texts all cirkels kleine-rode-cirkel-54-cm">
+        <h2>cirkels</h2>
+        <p>een kleine rode cirkel (ø 54 cm)</p>
+      </div>
+      <div id="grote-cirkel-15-cm" class="work texts all cirkels grote-cirkel-15-cm">
+        <h2>cirkels</h2>
+        <p>een grote cirkel (ø 15 cm)</p>
+      </div>
+      <div id="afstand-10-meter" class="work texts all afstand afstand-10-meter">
+        <h2>afstand</h2>
+        <p>een afstand van 10 meter</p>
+      </div>
+      <div id="afstand-1205-meter" class="work texts all afstand afstand-1205-meter">
+        <h2>afstand</h2>
+        <p>een afstand van 1205 meter</p>
       </div>
       <div id="to-the-moon" class="work visuals all time-pieces to-the-moon">
         <svg id="moon" viewBox="0 0 100 100" >
@@ -86,7 +104,7 @@
           <rect id="namedColorYellow" x="0" width="100" height="100" fill="yellow"/>
         </svg>
       </div>
-      <div id="day" class="work visuals all things-that-are day visual">
+      <div id="day" class="work visuals all dingen-die-zijn day visual">
         <svg id="day" version="1.1" viewBox="0 0 591 1050">
           <rect id="air" x="0" y="0" width="591" height="1050" fill="#ddd"/>
           <rect id="bottom" x="198" y="392" width="131" height="657" fill="#ececec"/>
@@ -106,12 +124,11 @@
     </footer>
   </div>
 </body>
-<script src="./scripts/the-next-ice-age.js"></script>
 <script src="./scripts/to-the-moon.js"></script>
 <script src="./scripts/time-of-my-life.js"></script>
 <script src="./scripts/main.js"></script>
 <script>
-  const series = ['works-of-color', 'named-color', 'time-pieces', 'things-that-are', 'other']
+  const series = ['works-of-color', 'named-color', 'time-pieces', 'dingen-die-zijn', 'cirkels', 'afstand']
   const types = ['texts', 'visuals', 'all']
 
   const categories = series.concat(types)
@@ -200,7 +217,7 @@
       });
     }
 
-    const toHideIdOnLoad = ['texts-toggle']
+    const toHideIdOnLoad = []
     if (toHideIdOnLoad.length > 0){
       toHideIdOnLoad.forEach(id => {
         document.getElementById(id).click()
