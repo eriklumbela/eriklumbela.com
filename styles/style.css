@@ -20,7 +20,7 @@ body {
   margin: auto;
   display: inline-block;
   text-align: left;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .masonry-with-columns div.hidden {

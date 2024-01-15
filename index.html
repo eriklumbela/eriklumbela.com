@@ -50,21 +50,21 @@
       </div>
       <div id="kleine-rode-cirkel-54-cm" class="work texts all cirkels kleine-rode-cirkel-54-cm">
         <h2>cirkels</h2>
-        <p>een kleine rode cirkel (ø 54 cm)</p>
+        <p class="cirkel-string">een kleine rode cirkel (ø 54 cm)</p>
       </div>
       <div id="grote-cirkel-15-cm" class="work texts all cirkels grote-cirkel-15-cm">
         <h2>cirkels</h2>
-        <p>een grote cirkel (ø 15 cm)</p>
+        <p class="cirkel-string">een grote cirkel (ø 15 cm)</p>
       </div>
       <div id="afstand-10-meter" class="work texts all afstand afstand-10-meter">
         <h2>afstand</h2>
-        <p>een afstand van 10 meter</p>
+        <p class="distance-string">een afstand van 10 meter</p>
       </div>
       <div id="afstand-1205-meter" class="work texts all afstand afstand-1205-meter">
         <h2>afstand</h2>
-        <p>een afstand van 1205 meter</p>
+        <p class="distance-string">een afstand van 1205 meter</p>
       </div>
-      <div id="to-the-moon" class="work visuals all time-pieces to-the-moon">
+      <div id="to-the-moon-visual" class="work visuals all time-pieces to-the-moon">
         <svg id="moon" viewBox="0 0 100 100" >
           <rect x="0" y="0" width="100%" height="100%" fill="black"></rect>
           <circle cx="-30%" cy="50%" r="30%" fill="white">
@@ -78,7 +78,7 @@
           </circle>
         </svg>
       </div>
-      <div id="to-the-moon" class="work texts all time-pieces to-the-moon">
+      <div id="to-the-moon-text" class="work texts all time-pieces to-the-moon">
         <h2>to the moon</h2>
         <p>At a walking pace of <span id="walking-pace-in-kms">5,4</span> km's an hour. It would take me approximately <span id="moons-to-supermoon">95</span> full moons to reach the super moon (when the moon is nearest and brightest), or <span id="moons-to-eclipsed-moon">106</span> moons to reach an eclipsed moon (when the moon is most distant).</p>
         <p>This calculation assumes walking continously 24 hours each day, which is not realistic. Furthermore, the notion of walking to the moon is highly impractical and not achievable in reality.</p>
@@ -125,6 +125,8 @@
   </div>
 </body>
 <script src="./scripts/to-the-moon.js"></script>
+<script src="./scripts/afstand.js"></script>
+<script src="./scripts/cirkels.js"></script>
 <script src="./scripts/time-of-my-life.js"></script>
 <script src="./scripts/main.js"></script>
 <script>
@@ -154,12 +156,11 @@
     }    
   }
 
-  function checkCategoriesVisibility(){
+  function  checkCategoriesVisibility(){
     categories.forEach(category => {
       checkVisibilityOf(category)
     })
   }
-
 
   function toggleVisibility(event) {
     const elementId = event.target.id
@@ -173,6 +174,8 @@
       elementClasses.add('hidden');
       hideWorksOfClass(worksClassName)
     } 
+
+    storeHiddenWorks()
   }
 
   function hideWorksOfClass(worksClassName){
@@ -259,17 +262,45 @@
         }
       }
     }
-    document.querySelectorAll('.work').forEach(work => {
-      work.addEventListener('click', () => {
-        if (getQueryParam('show')== work.id){
-          window.location.href = './'
-        } else {
-          window.location.href = `${window.location.pathname}?show=${work.id}`
-        }
-      })
-    })
 
-    window.onload = shuffleWorks;
+    // add click event to works to show/hide queryparams
+    //document.querySelectorAll('.work').forEach(work => {
+    //  work.addEventListener('click', () => {
+    //    if (getQueryParam('show')== work.id){
+    //      window.location.href = './'
+    //    } else {
+    //      window.location.href = `${window.location.pathname}?show=${work.id}`
+    //    }
+    //  })
+    //})
+
+    // function to store works that are hidden in localstorage
+    // this is used to keep works hidden when the page is reloaded
+    function storeHiddenWorks(){
+      const hiddenWorks = document.querySelectorAll('.work.hidden')
+      const hiddenWorkIds = []
+      hiddenWorks.forEach(work => {
+        hiddenWorkIds.push(work.id)
+      })
+      localStorage.setItem('hiddenWorks', JSON.stringify(hiddenWorkIds))
+    }
+
+    // function to hide works that are stored in localstorage
+    // this is used to keep works hidden when the page is reloaded
+    function hideStoredWorks(){
+      const hiddenWorkIds = JSON.parse(localStorage.getItem('hiddenWorks'))
+      if (hiddenWorkIds){
+        hiddenWorkIds.forEach(id => {
+          document.getElementById(id).classList.add('hidden')
+        })
+      }
+    }
+
+    window.onload = function () {
+      hideStoredWorks()
+      checkCategoriesVisibility()
+    }
+
     showAndHideWorksByQueryParams()
 </script>
 </html>
