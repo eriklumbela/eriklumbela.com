@@ -52,7 +52,7 @@ const interval = 1000
 function setLifeLeftInSeconds() {
   lifeLeftInMilliseconds -= interval
   const secondsLeft = document.getElementById('seconds-left')
-  secondsLeft.innerText = Math.floor(lifeLeftInMilliseconds / 1000).toLocaleString()
+  secondsLeft.innerText = Math.floor(lifeLeftInMilliseconds / 1000).toLocaleString() + " seconds (time of my life)"
 }
 
 setLifeLeftInSeconds()
