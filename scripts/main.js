@@ -1,3 +1,5 @@
+import { flashColor } from './color-flash.js';
+
 function externalLinks() {
   for(let c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
     let b = c[a]
@@ -31,5 +33,23 @@ function getRandomColor() {
   return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
-
 generateFavicon(getRandomColor())
+
+function getInterval(getIntervalIndicator = 'getInterval', maxAddedDuration = 10000, baseDuration = 0) {
+  const interval = Math.floor(Math.random() * maxAddedDuration) + baseDuration
+  console.log(`getIntervalIndicator: ${getIntervalIndicator}, interval: ${interval}`)
+  return interval
+}
+
+function runFlashColorWithRandomInterval() {
+  const interval = getInterval('flashColor', 45000, 15000);
+  setTimeout(() => {
+    const colorDuration = getInterval('flashColorDuration');
+    flashColor(getRandomColor(), getRandomColor(), colorDuration);
+    runFlashColorWithRandomInterval();
+  }, interval);
+}
+
+runFlashColorWithRandomInterval();
+
+flashColor(getRandomColor(), getRandomColor(), getInterval('initialFlashColor', 10000));
