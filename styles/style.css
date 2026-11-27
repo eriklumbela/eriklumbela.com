@@ -74,6 +74,20 @@ header a.hidden {
   color: #333;
 }
 
+#footer-items {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+#footer-items > p {
+  margin: 0;
+}
+
+#mc_embed_shell {
+  margin-left: 10px;
+}
+
 footer a {
   display: inline-block;
   color: #333;
@@ -81,6 +95,20 @@ footer a {
   margin: 5px;
   padding: 5px;
   border-radius: 1rem;
+}
+
+#mc-embedded-subscribe {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 1rem;
+  background-color: #e6e6e6;
+  color: #333;
+  font: inherit;
+  cursor: pointer;
+}
+
+#mc-embedded-subscribe:hover {
+  background-color: #d6d6d6;
 }
 
 .alternate:hover,
